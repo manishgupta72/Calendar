@@ -6,15 +6,16 @@
 }
 body
 {
-  font-family: algerian;
-  background-image:url(back.jpg);
+  font-family: sans-serif;
+  font-weight:bold;
+  font-style: italic;
 }
 .wrapper
 {
     display: flex;
     width:100vw;
     height: 100vh;
-    background:gray;
+    background-image: linear-gradient(blue,skyblue,red);
 }
 .calendar
 {
