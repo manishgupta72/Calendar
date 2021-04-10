@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <title>calendar By Manish</title>
+    <link href="css/calendar.css" rel="stylesheet">
+
+
+</head>
+
+<body onload="RenderDate()">
+    <div class="wrapper">
+        <div class="calendar">
+
+            <!-- month start -->
+            <div class="month">
+
+                <div class="prev" onclick="moveDate('prev')">
+
+                    <span>&#10094</span>
+
+                </div>
+                <div class='fas fa-calendar-alt' id="td"></div>
+
+                <div>
+                    <h2 id="months"></h2>
+                    <p id="date-str"></p>
+                </div>
+                <div class="next" onclick="moveDate('next')">
+                    <span>&#10095</span>
+                </div>
+            </div>
+            <!-- weekend start -->
+            <div class="week">
+                <div id="su">Sun</div>
+                <div>Mod</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+            </div>
+            <!-- days start -->
+            <div class="days">
+
+            </div>
+
+        </div>
+
+        <!--pop box html code here  start -->
+        <div class="popup" id="pop-up1">
+            <div class="content">
+                <div class="close-btn" onclick="togglePopup()">&times</div>
+                <h2>Govardhan<br> Puja</h2>
+            </div>
+        </div>
+        <!-- <button onclick="togglePopup()">show popup</button> -->
+        <!-- pop box html here end -->
+    </div>
+
+    <script src="js/caledar.js"></script>
+</body>
+
+</html>

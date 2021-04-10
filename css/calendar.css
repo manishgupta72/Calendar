@@ -1,0 +1,166 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+  font-family: sans-serif;
+}
+.wrapper
+{
+    display: flex;
+    width:100vw;
+    height: 100vh;
+    background:gray;
+}
+.calendar
+{
+    margin: auto;
+    width:600px;
+    background:#fff;
+    box-shadow:0 0 15px 3px rgb(0,0,0,0.5);
+    cursor: pointer;
+}
+
+#td
+{
+  position: relative;
+  top:-10px;
+  left:140px ;
+  font-size:22px;
+    
+}
+
+.month
+{
+    background:#41fc4f;
+    color:white;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding:25px 15px;
+    text-align: center;
+}
+.week 
+{
+    display: flex;
+    background:#0fc626;
+    padding:7px 0;
+    color:white;
+}
+.week div{
+    /* width:14.28%;
+    text-align:center; */
+}
+.days
+{
+    display: flex;
+    flex-wrap: wrap;
+    font-weight:300;
+    padding:10px 0;
+    text-align: center;
+    
+}
+.days div
+{
+width:14.28%;
+margin-bottom:20px;
+transition: all .4s;
+padding: 10px 0;
+text-align: center;
+
+}
+.week div,
+.day div{
+    width:14.28%;
+    text-align: center;
+}
+.days div:hover{
+    cursor: pointer;
+    background:gray;
+}
+.today
+{
+    background:#032ef5;
+    color:white
+}
+.prev-date
+{
+    color: #999;
+}
+#month
+{
+    font-weight:500;
+    padding:10px 0;
+    font-size:30px;
+}
+.prev,
+.next{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgb(0,0,0,0.1);
+    font-size:25px;
+    cursor: pointer;
+    transition:all 0.4s;
+}
+.prev:hover,
+.next:hover{
+background:rgb(0,0,0,0.2);
+}
+
+
+
+/* popup box css start */
+
+.popup .content
+        {
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform:translate(-50%,-50%)scale(0);
+            background:linear-gradient(lightblue,lightpink);
+            height:150px;
+            width: 150px;
+            z-index: 2;
+            text-align: center;
+            padding: 20px;
+            font-family: sans-serif;
+            font-weight: bold;
+            box-sizing: border-box;
+            border-radius:30%;
+        }
+        .popup .content h2{
+            position: relative;
+            top: 30px;
+            color:navy;
+        }
+        .popup .close-btn
+        {
+            position: absolute;
+            top:0px;
+            right:5px;
+            background-color:rgb(0, 0, 0,1);
+            width:30px;
+            height:30px;
+            border-radius: 50%;
+            cursor: pointer;
+            color:#fff;
+            font-weight: bold;
+            line-height:30px;
+
+        }
+        
+        .popup.active .content
+        {
+            transition:all 1s ease-in-out;
+            transform:translate(-50%,-50%)scale(1);
+        }
+
+    /*  pop box css end*/

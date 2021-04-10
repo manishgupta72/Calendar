@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .popup .overlay
+        {
+          
+          position: fixed;
+          top: 0;
+          left: 0;
+          width:100vw;
+          height:100vh;
+          background:rgba(0, 0, 0, 0.5);
+          z-index: 1;
+          display: none;
+        }
+
+        .popup .content
+        {
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform:translate(-50%,-50%)scale(0);
+            background:linear-gradient(lightblue,lightpink);
+            height:200px;
+            width: 200px;
+            z-index: 2;
+            text-align: center;
+            padding: 20px;
+            font-family: sans-serif;
+            font-weight: bold;
+            box-sizing: border-box;
+        }
+        .popup .content h1{
+            position: relative;
+            top: 30px;
+        }
+        .popup .close-btn
+        {
+            position: absolute;
+            top:5px;
+            right:20px;
+            background-color:gray;
+            width:30px;
+            height:30px;
+            border-radius: 50%;
+            cursor: pointer;
+            color:#fff;
+            font-weight: bold;
+            line-height:30px;
+
+        }
+        .popup.active .overlay
+        {
+            display:block;
+        }
+        .popup.active .content
+        {
+            transition:all 1s ease-in-out;
+            transform:translate(-50%,-50%)scale(1);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="popup" id="pop-up1">
+    <div class="overlay"></div>
+    <div class="content">
+    <div class="close-btn" onclick="togglePopup()">&times</div>
+    <h1>Govardhan<br> Puja</h1>
+    </div>
+    </div>
+    <button onclick="togglePopup()">show popup</button>
+<script>
+    function togglePopup()
+    {
+    document.getElementById("pop-up1").classList.toggle("active");
+    }
+    </script>
+</body>
+</html>
